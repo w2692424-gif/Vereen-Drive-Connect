@@ -2,7 +2,20 @@
   "buildCommand": "npm run build",
   "outputDirectory": ".output/public",
   "framework": "tanstack-start",
+  "nodejs": "18.x",
+  "serverlessFunctionRegion": "iad1",
   "env": {
     "NODE_ENV": "production"
-  }
+  },
+  "headers": [
+    {
+      "source": "/api/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        }
+      ]
+    }
+  ]
 }
