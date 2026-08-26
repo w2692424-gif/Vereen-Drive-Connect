@@ -113,7 +113,7 @@ export function SectionHeading({
 /* ---------------------------------------------------------------- buttons */
 
 const base =
-  "group relative inline-flex items-center justify-center gap-2.5 overflow-hidden px-6 py-3.5 label-mono transition-all duration-300 min-h-11";
+  "group relative inline-flex items-center justify-center gap-2.5 overflow-hidden px-5 py-3 sm:px-6 sm:py-3.5 label-mono transition-all duration-300 min-h-12 sm:min-h-11 w-full sm:w-auto";
 
 export function ActionLink({
   to,
@@ -163,11 +163,11 @@ export function StickyCall() {
     <a
       href={PHONE_HREF}
       aria-label={`Call Veeren Drive Connect at ${PHONE_DISPLAY}`}
-      className="label-mono fixed bottom-5 right-5 z-[60] inline-flex min-h-12 items-center gap-2.5 border border-brand bg-brand px-5 py-3.5 text-brand-foreground shadow-lg transition-transform duration-300 hover:scale-[1.03] sm:bottom-8 sm:right-8"
+      className="label-mono fixed bottom-4 right-4 z-[60] inline-flex min-h-12 items-center gap-2.5 border border-brand bg-brand px-4 sm:px-5 py-3.5 text-brand-foreground shadow-lg transition-transform duration-300 hover:scale-[1.03] sm:bottom-8 sm:right-8 text-sm sm:text-base"
     >
-      <Phone className="h-4 w-4" aria-hidden="true" />
+      <Phone className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
       <span className="hidden sm:inline">{PHONE_DISPLAY}</span>
-      <span className="sm:hidden">Call now</span>
+      <span className="sm:hidden">Call</span>
     </a>
   );
 }
@@ -270,9 +270,9 @@ export function Section({
   container?: boolean;
 }) {
   return (
-    <section id={id} className={cn("relative py-20 sm:py-28", className)}>
+    <section id={id} className={cn("relative py-16 sm:py-20 lg:py-28", className)}>
       {container ? (
-        <div className="mx-auto w-full max-w-[88rem] px-5 sm:px-8 lg:px-12">{children}</div>
+        <div className="mx-auto w-full max-w-[88rem] px-4 sm:px-5 lg:px-8 xl:px-12">{children}</div>
       ) : (
         children
       )}
@@ -288,7 +288,7 @@ export function Container({
   className?: string | undefined;
 }) {
   return (
-    <div className={cn("mx-auto w-full max-w-[88rem] px-5 sm:px-8 lg:px-12", className)}>
+    <div className={cn("mx-auto w-full max-w-[88rem] px-4 sm:px-5 lg:px-8 xl:px-12", className)}>
       {children}
     </div>
   );

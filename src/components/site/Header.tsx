@@ -57,7 +57,7 @@ export function Header() {
             : "border-transparent bg-gradient-to-b from-background/80 to-transparent py-5",
         )}
       >
-        <div className="mx-auto flex w-full max-w-[88rem] items-center justify-between gap-6 px-5 sm:px-8 lg:px-12">
+        <div className="mx-auto flex w-full max-w-[88rem] items-center justify-between gap-6 px-4 sm:px-5 lg:px-8 xl:px-12">
           <Link to="/" aria-label="Veeren Drive Connect — home" className="shrink-0">
             <LogoHorizontal compact={scrolled} className="hidden sm:flex" />
             <LogoCompact className="sm:hidden" />
@@ -98,7 +98,7 @@ export function Header() {
               aria-expanded={open}
               aria-controls="mobile-menu"
               aria-label={open ? "Close menu" : "Open menu"}
-              className="inline-flex h-11 w-11 items-center justify-center border border-border-strong text-foreground transition-colors hover:border-brand lg:hidden"
+              className="inline-flex h-12 w-12 items-center justify-center border border-border-strong text-foreground transition-colors hover:border-brand lg:hidden"
             >
               {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
@@ -116,7 +116,7 @@ export function Header() {
             transition={{ duration: 0.25 }}
             className="fixed inset-0 z-40 flex flex-col bg-background pt-24 lg:hidden"
           >
-            <nav aria-label="Mobile" className="flex-1 overflow-y-auto px-5 pb-10">
+            <nav aria-label="Mobile" className="flex-1 overflow-y-auto px-4 sm:px-5 pb-10">
               <ul className="divide-y divide-border border-y border-border">
                 {NAV.map((item, i) => (
                   <motion.li

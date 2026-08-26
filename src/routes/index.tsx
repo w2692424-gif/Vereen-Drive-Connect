@@ -291,7 +291,7 @@ function Hero() {
           </p>
         </Reveal>
         <Reveal delay={0.3}>
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-10 flex flex-col gap-3 sm:gap-3 sm:flex-row sm:items-center">
             <ActionLink href={PHONE_HREF} variant="outline">Call {PHONE_DISPLAY}</ActionLink>
             <ActionLink to="/services">Explore Audio Services</ActionLink>
           </div>
